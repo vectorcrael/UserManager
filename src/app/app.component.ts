@@ -23,4 +23,9 @@ export class AppComponent {
       this.authService.logout();
       this.router.navigate(['/login']);
      }
+
+     getCurrentUser(){
+      //Open the details with the current user
+      this.router.navigate(['/user/details/', this.authService.getLoginID()]); 
+     }
 }

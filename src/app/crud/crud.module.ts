@@ -9,13 +9,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CrudRoutingModule } from './crud-routing.module';
 import { HomeComponent } from './home/home.component';
+import { ViewComponent } from './view/view.component';
 import { DetailsComponent } from './details/details.component';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, DetailsComponent, CreateComponent, UpdateComponent],
+  declarations: [HomeComponent, DetailsComponent, CreateComponent, UpdateComponent, ViewComponent],
   imports: [
     CommonModule,
     CrudRoutingModule,
@@ -23,6 +24,6 @@ import { UpdateComponent } from './update/update.component';
     FormsModule,
     ReactiveFormsModule 
   ],
-  exports: [HomeComponent, DetailsComponent, CreateComponent, UpdateComponent] 
+  exports: [HomeComponent, DetailsComponent, CreateComponent, UpdateComponent,ViewComponent] 
 })
 export class CrudModule { }

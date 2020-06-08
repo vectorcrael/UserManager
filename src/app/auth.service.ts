@@ -65,6 +65,13 @@ export class AuthService {
       return "Default User";
   }
 
+  getLoginID (){
+    if(this.currentUserObject)
+      return this.currentUserObject.id;
+    else
+      return 0;
+  }
+
   logout() { 
     localStorage.removeItem('token');
     this.currentUser = null;
