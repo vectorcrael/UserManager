@@ -3,6 +3,16 @@
     <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="signIn(loginForm.value)" >
   <img class="mb-4" src="assets/img/user-icon-large.png" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+  <div class="alert alert-danger" *ngIf="this.invalidLogin"> 
+    <h4>Failed to Login.</h4> 
+    <p>The following could help resolve the issue:</p>
+    <ol>
+      <li>If you just registered, refresh the browser.</li> 
+      <li>The jason-server may be down or stuck verify that it is up.</li> 
+      <li>Also Verify Your Email and password may be wrong.</li> 
+      <li>Delete your local cache tokens and log in again.</li> 
+    </ol> 
+ </div>
   <label for="inputEmail" class="sr-only">Email address</label>
   <input formControlName="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
   <label for="inputPassword" class="sr-only">Password</label>
@@ -12,7 +22,12 @@
       <input type="checkbox" value="remember-me"> Remember me
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">&copy; DevelopersInc 2020</p>
+  <div class="btn-group" role="group" aria-label="Options">
+    <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-info" routerLink="/register">Register</button>
+  </div>
+  <div style="margin-bottom: 0;" > 
+      <p class="mt-5 mb-3 text-muted">&copy; DevelopersInc 2020</p>
+  </div>
  </form>
 </body>

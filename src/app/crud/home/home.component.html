@@ -21,7 +21,7 @@
                 <td>{{user.email}}</td>
                 <td>{{user.role}}</td>
                 <td> 
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group" role="group" aria-label="Actions">
                         <button class="btn btn-sm btn-success" type="button" [routerLink]="['/user/details/', user.id]">Details</button>
                         <button class="btn btn-sm btn-warning" type="button" [routerLink]="['/user/update/', user.id]">Update</button>
                         <button class="btn btn-sm btn-danger" type="button" (click)="onRemove(user)">Remove</button> <!--raise modal for confirmation-->
@@ -36,7 +36,7 @@
 </div>
 
 <div class="container">
-    <div class="btn-group" role="group" aria-label="Basic example">
+    <div class="btn-group" role="group" aria-label="Options">
         <button class="btn btn-info" type="button" (click)="reloadUsers()">Reload Users</button>
         <button class="btn btn-primary" type="button" [routerLink]="['/user/create/']">Create New User</button>
     </div>

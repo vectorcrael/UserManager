@@ -7,7 +7,7 @@
       "password": "default",
       "role": "regular",
       "id": 1,
-      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Elroy",
@@ -16,7 +16,7 @@
       "password": "ror12II",
       "role": "admin",
       "id": 2,
-      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Greece",
@@ -25,7 +25,7 @@
       "password": "default",
       "role": "regular",
       "id": 3,
-      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Meek",
@@ -34,7 +34,7 @@
       "password": "default",
       "role": "regular",
       "id": 4,
-      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Tipson",
@@ -43,7 +43,34 @@
       "password": "2222NNnn",
       "role": "admin",
       "id": 5,
-      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
+    },
+    {
+      "name": "Nigel",
+      "surname": "Nyoni",
+      "email": "vectorcrael@gmail.com",
+      "password": "asdfaasdfa",
+      "role": "regular",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg",
+      "id": 6
+    },
+    {
+      "name": "Nigel",
+      "surname": "Nyoni",
+      "email": "vectorcrael@gmail.com",
+      "password": "adasdfa",
+      "role": "regular",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg",
+      "id": 7
+    },
+    {
+      "name": "Nigel",
+      "surname": "Nyoni",
+      "email": "vectorcrael@gmail.com",
+      "password": "asdasdasda",
+      "role": "regular",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg",
+      "id": 8
     }
   ]
 }

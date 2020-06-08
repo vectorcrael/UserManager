@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,8 @@ export class AppComponent {
   constructor(public router: Router,
     public authService: AuthService
     ){ 
-
-      if(!authService.isLoggedIn())
+      //ensure that the user is logged in - this simulates what a guard does
+      if(!authService.isLoggedIn() && router.url !== '/register')
       {
         this.router.navigate(['/login']);
       }

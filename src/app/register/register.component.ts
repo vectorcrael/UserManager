@@ -3,9 +3,8 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AlertService } from '../services/alert.service';
-import { AuthenticationService } from '../services/authentication.service';
-import { UserService } from '../services/user.service';
+import { CrudService } from '../crud/crud.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -17,16 +16,16 @@ export class RegisterComponent implements OnInit {
     registerForm: FormGroup;
     loading = false;
     submitted = false;
+    formError = false;
 
     constructor(
         private formBuilder: FormBuilder,
         private router: Router,
-        private authenticationService: AuthenticationService,
-        private userService: UserService,
-        private alertService: AlertService
+        private authenticationService: AuthService,
+        private userService: CrudService,
     ) { 
         // redirect to home if already logged in
-        if (this.authenticationService.currentUserValue) { 
+        if (this.authenticationService.isLoggedIn()) { 
             this.router.navigate(['/']);
         }
     }
@@ -36,7 +35,9 @@ export class RegisterComponent implements OnInit {
             name: ['', Validators.required],
             surname: ['', Validators.required],
             email: ['', Validators.required],
-            password: ['', [Validators.required, Validators.minLength(6)]]
+            password: ['', [Validators.required, Validators.minLength(6)]],
+            role:['regular'],
+            token:['eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg']
         });
     }
 
@@ -48,6 +49,7 @@ export class RegisterComponent implements OnInit {
 
         // stop here if form is invalid
         if (this.registerForm.invalid) {
+            this.formError = true;
             return;
         }
 
@@ -56,12 +58,11 @@ export class RegisterComponent implements OnInit {
             .pipe(first())
             .subscribe(
                 data => {
-                    this.alertService.success('Registration successful', true);
                     this.router.navigate(['/login']);
                 },
                 error => {
-                    this.alertService.error(error);
                     this.loading = false;
+                    this.formError = true;
                 });
     }
 }

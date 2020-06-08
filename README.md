@@ -75,6 +75,10 @@ The login details used are from the database.json file
 *For Administrator Use Email: roy@domain.com Password: ror12II
 *For Regular-User Use Email: Danny@doYahoo.com Password: ror12II
 
+`Login as an administrator to be able to edit users - create, update and delete.`
+`Login as an regular user to be able to view and create only - no update and delete.`
+
+
 
 
 Further Instructions for using Angular

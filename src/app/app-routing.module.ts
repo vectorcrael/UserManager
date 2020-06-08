@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
-import { NoAccessComponent } from './no-access/no-access.component';
 import { RegisterComponent } from './register/register.component';
-import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './crud/home/home.component';
 import { ViewComponent } from './crud/view/view.component';
 import { DetailsComponent } from './crud/details/details.component';
@@ -17,7 +15,6 @@ const routes: Routes = [
   //routes for the administrator
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
-  { path: 'no-access', component: NoAccessComponent },
   { path: 'register', component: RegisterComponent },
 
   //crud module routes

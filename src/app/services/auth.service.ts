@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { CrudService } from './crud/crud.service';
+import { CrudService } from '../crud/crud.service';
 import { tokenNotExpired, JwtHelper } from 'angular2-jwt'; 
-import { User } from './crud/user'; 
+import { User } from '../crud/user'; 
 
 @Injectable({
   providedIn: 'root'
@@ -30,11 +30,15 @@ export class AuthService {
   }
 
   login(credentials) { 
-    let result = this.users.find(x => x.email === credentials.email && x.password === credentials.password);
+    let result : User;
+
+    if(this.users)
+      result = this.users.find(x => x.email === credentials.email && x.password === credentials.password);
+      
     if (result && result.token) {
 
       //Hard coded for simulation
-      ////None Admin Token
+      ////Regular User Token
       //localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg'); 
       //Admin Token
       localStorage.setItem('token', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkVscm95IE55b25pIiwiYWRtaW4iOnRydWV9.bcM7UvV9BXL_fqvUOqeFYIuojwyALeQk447DIw7DaCA'); 
@@ -43,6 +47,9 @@ export class AuthService {
       
       let jwt = new JwtHelper();
       this.currentUser = jwt.decodeToken(localStorage.getItem('token'));
+      
+      
+      localStorage.setItem('user', JSON.stringify(result));
       this.currentUserObject = result;
 
       return true; 
@@ -58,7 +65,14 @@ export class AuthService {
       return false;
   }
 
+checkForUserItem(){
+  if (!this.currentUserObject)
+    this.currentUserObject = JSON.parse(localStorage.getItem('user'));
+}
+
   getLoginName(){
+    this.checkForUserItem();
+
     if(this.currentUserObject)
       return this.currentUserObject.name;
     else
@@ -66,6 +80,8 @@ export class AuthService {
   }
 
   getLoginID (){
+    this.checkForUserItem();
+
     if(this.currentUserObject)
       return this.currentUserObject.id;
     else
@@ -74,6 +90,7 @@ export class AuthService {
 
   logout() { 
     localStorage.removeItem('token');
+    localStorage.removeItem('user');
     this.currentUser = null;
   }
 
