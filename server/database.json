@@ -3,18 +3,20 @@
     {
       "name": "Denny",
       "surname": "Banda",
-      "email": "email@domain.com",
+      "email": "Danny@doYahoo.com",
       "password": "default",
       "role": "regular",
-      "id": 305
+      "id": 1,
+      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Elroy",
       "surname": "Nyoni",
       "email": "roy@domain.com",
       "password": "ror12II",
-      "role": "regular",
-      "id": 306
+      "role": "admin",
+      "id": 2,
+      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Greece",
@@ -22,7 +24,8 @@
       "email": "email@domain.com",
       "password": "default",
       "role": "regular",
-      "id": 307
+      "id": 3,
+      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Meek",
@@ -30,7 +33,8 @@
       "email": "email@domain.com",
       "password": "default",
       "role": "regular",
-      "id": 308
+      "id": 4,
+      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     },
     {
       "name": "Tipson",
@@ -38,7 +42,8 @@
       "email": "tip@malete.com",
       "password": "2222NNnn",
       "role": "admin",
-      "id": 309
+      "id": 5,
+      "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     }
   ]
 }

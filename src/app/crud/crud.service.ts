@@ -26,7 +26,7 @@ export class CrudService {
 
   //inject the http client to the service
   constructor(private httpClient: HttpClient) { }
-  
+
   //create a new user using this operation 
   create(user): Observable<User> {
     return this.httpClient.post<User>(this.apiServer + '/users/', JSON.stringify(user), this.httpOptions)
@@ -34,6 +34,14 @@ export class CrudService {
       catchError(this.errorHandler)
     )
   }  
+
+  //technically the same as create user though done directly by the user
+  register(user): Observable<User> {
+    return this.httpClient.post<User>(this.apiServer + '/users/', JSON.stringify(user), this.httpOptions)
+    .pipe(
+      catchError(this.errorHandler)
+    )
+  }
 
   //get the user objects using the id
   getById(id): Observable<User> {
@@ -58,6 +66,8 @@ export class CrudService {
       catchError(this.errorHandler)
     )
   }
+
+
 
   //delete the selected user
   delete(id) : Observable<void>{

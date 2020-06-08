@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss']
+  styleUrls: ['./create.component.css']
 })
 export class CreateComponent implements OnInit {
   userForm: FormGroup;

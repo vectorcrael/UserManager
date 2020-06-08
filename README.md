@@ -50,21 +50,37 @@ Run the following command to update to download all the dependancies into the no
 To launch the application
 * Run 	`ng serve --open`
 
-### Troubleshooting
-Should this command to fail try a few of these troubleshooting commands. (Do not run all of them, try one at a time)
+## Troubleshooting
+```Should the command to install and run the applicaiton fail try a few of these troubleshooting commands. 
+Do not run all of them at once, try one at a time. 
+Preferebly from an elevatied teminal(run as administrator).```
+If you are trying to run the application a second time and there are some missing depandancies use the following commands to download them
 * Run 	`npm update`
 * Run 	`npm update <packageName>`
+If you want to rebuild everything in the application use the following command
 * Run 	`npm rebuild`
+If the install keeps refusing try to force it with the following
 * Run 	`npm install --force`
+When all the above fail t
 * Run 	`npm cache clean --force` 
 
+Login Details And Generation of JWT tokens
+========================================================
+The application is using a hard coded JSON Web Token for authentication. To generate and use a token: 
+*Goto [JWT](https://jwt.io/)and change the payload details, include a property `admin`: `true` in order to make the user an administrator.
+*Replace this token in the authentication service auth.service.ts where the web token is hardcoded - localStorage.setItem('token',... Line 41
+
+The login details used are from the database.json file
+*You can manually go and create a user in the file or
+*For Administrator Use Email: roy@domain.com Password: ror12II
+*For Regular-User Use Email: Danny@doYahoo.com Password: ror12II
 
 
 
 Further Instructions for using Angular
 ========================================================
 
-# UserManager
+## UserManager
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 

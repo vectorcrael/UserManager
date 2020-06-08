@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
 
@@ -15,7 +15,9 @@ export class DetailsComponent implements OnInit {
     surname: 'default',
     email: 'email@domain.com',
     password: 'default',
-    role: 'general' };
+    role: 'general',
+    token: 'general'
+  };
     
   UserId: number;
 

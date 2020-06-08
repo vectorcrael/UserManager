@@ -10,7 +10,7 @@ import { tap } from 'rxjs/operators';
 @Component({
   selector: 'update',
   templateUrl: './update.component.html',
-  styleUrls: ['./update.component.scss']
+  styleUrls: ['./update.component.css']
 })
 
 export class UpdateComponent implements OnInit {

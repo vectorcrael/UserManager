@@ -7,25 +7,41 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<header>   
+<header *ngIf="router.url !== '/login'" >   
         <nav class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="background-color:midnightblue;">
             <div class="container">
-            <a href="#" class="navbar-brand logo">UserManager</a>
-            <div class="collapse navbar-collapse">
+              <!-- logo -->
+                <div class="navbar-brand">
+                    <a href="/" class="navbar-brand logo" alt="UserManager">
+                    <img src="assets/img/user-icon.png">
+                    </a>
+                    <a href="/" class="navbar-brand logo">User Manager App</a>
+                </div>
+            <div class="nav navbar-right ml-auto">
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><a class="nav-link " href="/">Home</a></li>
+                    <li class="nav-item " [class] = "router.url === '/' ? ' active':''"><a class="nav-link " href="/">Home</a></li>
                     <li class="nav-item"  ><a class="nav-link " href="/user/home">View Users</a></li>
                     <li class="nav-item"  ><a class="nav-link " href="/user/create">Create New</a></li>
 
-                    <li class="nav-item"  >    <a class="nav-link" routerLink="/admin/home">Admin</a></li> 
-                        <li class="nav-item"  >   <a class="nav-link" routerLink="/admin/user">View Users</a></li> 
-                        <li class="nav-item"  ><a class="nav-link" routerLink="/login">Logout</a> </li> 
+                    <li *ngIf="authService.isLoggedIn() && authService.isAdminUser()" class="nav-item"><a class="nav-link" routerLink="/admin/home">Admin</a></li> 
+                    <li class="nav-item"  ><a class="nav-link" routerLink="/admin/user">View Users</a></li> 
+                    <li *ngIf="!authService.isLoggedIn()" class="nav-item"  ><a class="nav-link" routerLink="/login">Login</a> </li> 
+                    <li *ngIf="authService.isLoggedIn()" class="nav-item"  ><a class="nav-link" (click)="logout()">Logout</a> </li> 
 
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome {{authService.getLoginName()}}</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" routerLink="/admin/home">Admin</a>
+                            <a class="dropdown-item" routerLink="/admin/user">View Users</a>
+                            <a class="dropdown-item" routerLink="/login">Logout</a> 
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div> 
-        </nav>            
-<header>
+        </nav> 
+        <br>           
+    </header>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
@@ -35,6 +51,8 @@
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<div class="container">
-    <router-outlet></router-outlet>
+<div *ngIf="router.url === '/'" class="container">
+    <home-welcome></home-welcome>
 </div>
+
+<router-outlet></router-outlet>
