@@ -1,7 +1,20 @@
 <div *ngIf="users.length > 0" class="container">
     
     <h2>View Users</h2>
-    
+
+    <div class="container">
+        <br>
+        <form class="form-inline my-2 my-lg-0 right ml-auto">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button class="btn btn-info" type="button" (click)="reloadUsers()">Reload Users</button>
+                <button class="btn btn-primary" type="button" [routerLink]="['/user/create/']">Create New User</button>
+                <button class="btn btn-secondary" (click)="onEnter(box.value)"  >Search User</button>
+            </div>
+            <input #box class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        </form>
+        <br>
+    </div>
+
     <table class="table table-striped table-bordered" >
         <thead>
             <tr>
@@ -28,12 +41,7 @@
     </table>
 </div>
 <div *ngIf="users.length == 0" class="container">
-    <h2>No Users Yet Users</h2>
+    <h2>No Users Matching Search</h2>
+    <button class="btn btn-info" type="button" (click)="reloadUsers()">Reload Users</button>
 </div>
 
-<div class="container">
-    <div class="btn-group" role="group" aria-label="Basic example">
-        <button class="btn btn-info" type="button" (click)="reloadUsers()">Reload Users</button>
-        <button class="btn btn-primary" type="button" [routerLink]="['/user/create/']">Create New User</button>
-    </div>
-</div>

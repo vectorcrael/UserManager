@@ -46,3 +46,9 @@
 </div>
 
 <router-outlet></router-outlet>
+
+<footer class="footer" *ngIf="router.url === '/' || router.url === '/login' || router.url === '/register' ">
+    <div class="container text-center" > 
+        <p>&copy; DevelopersInc 2020</p>
+    </div>
+</footer>

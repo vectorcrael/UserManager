@@ -35,4 +35,17 @@ export class ViewComponent implements OnInit {
     return user? user.id: undefined;
   }
 
+  onEnter(value: string) {
+    if(this.users){
+      let result = this.users.filter(x => 
+        x.name.toLowerCase().includes(value.toLowerCase()) 
+      || x.surname.toLowerCase().includes(value.toLowerCase())
+      || x.email.toLowerCase().includes(value.toLowerCase()));
+
+        if(result)
+          this.users = result;
+      }
+    
+    }
+
 }
