@@ -97,6 +97,24 @@
       "password": "12345Ul",
       "role": "admin",
       "id": 11
+    },
+    {
+      "name": "Denny",
+      "surname": "Banda",
+      "email": "Danny@doYahoo.com",
+      "password": "default",
+      "role": "regular",
+      "id": 12,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
+    },
+    {
+      "name": "Elroy",
+      "surname": "Nyoni",
+      "email": "roy@domain.com",
+      "password": "ror12II",
+      "role": "admin",
+      "id": 13,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjEyMTIxMSIsIm5hbWUiOiJFbHJveSBOeW9uaSIsImlhdCI6MTUxNjIzOTAyMn0.HZtm0Czx0QK4DIhpU--X9jM1g_GSvUdATqDMXoCMpJg"
     }
   ]
 }
