@@ -11,7 +11,8 @@ import { User } from '../user';
 export class HomeComponent implements OnInit {
   
   users: User[] = [];
-
+  pageOfItems: Array<any>;
+  
   constructor(public crudService: CrudService) { }
 
   loadData(){
@@ -56,5 +57,10 @@ export class HomeComponent implements OnInit {
       }
     
     }
+
+    onChangePage(pageOfItems: Array<any>) {
+      // update current page of items
+      this.pageOfItems = pageOfItems;
+  }
 
 }

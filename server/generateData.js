@@ -2,7 +2,7 @@ var faker = require('faker');
 
 var database = { users: []};
 
-for (var i = 1; i<= 10; i++) {
+for (var i = 1; i<= 20; i++) {
     //Use faker to generate some data for the users
     //get the first and last name in order to generate emails
     var first_name =faker.name.firstName();
@@ -15,7 +15,7 @@ for (var i = 1; i<= 10; i++) {
     email: faker.internet.email(first_name,last_name),
     password: faker.internet.password(),
     role: faker.random.arrayElement(["regular","admin"]), //chose the role here
-    string: faker.random.regexify('[A-Za-z0-9]{36}') +"."+ faker.random.regexify('[A-Za-z0-9]{75}') +"."+ faker.random.regexify('[A-Za-z0-9]{43}')
+    token: faker.random.alphaNumeric(36)+ "." + faker.random.alphaNumeric(75)+"." + faker.random.alphaNumeric(43)
   });
 }
 

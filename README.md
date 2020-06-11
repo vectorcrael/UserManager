@@ -15,7 +15,6 @@ Log into the GitHub website and do the following.
 * Clone the forked repo to your local machine using this command: `git clone http://github.com/<account-name>/User-Manager-Application.git`, replacing `<account-name>` with your GitHub username.
 * Alternatively download the source code as a zip file and unpack it in your local machine
 
-
 ## Part III: Downloading Additonal Required Applications
 Open the terminal or command prompt on your machine and run the following command to install Angular CLI.
 * Run 	`npm install -g @angular/cli`
@@ -27,9 +26,9 @@ The User Manager Angular Application uses json-server to access data.
 ```There are two files responsible for the mockup database server. The first which is the actual database is a json file. 
 `The second is js file that has methods to populate the database with sample information using a faker. 
 `We will use an application called jason-server to mimick a real database using the json file. The two filse are: 
+```
 1. server\database.json 
 2. server\generateData.js 
-```
 
 To get the data server running 
 * Run 	`npm run server`
@@ -44,16 +43,18 @@ To seed information in the database run the following command (optional)
 All the dependancies that the application needs to run are noted in a file calle package.json. 
 ```We need only run one command that will allow that package manager to download all the dependancies.
 Open the teminal and navagate (cd) to the folder that has the angular source code. 
-Run the following command to update to download all the dependancies into the node_modules folder.```
+Run the following command to update to download all the dependancies into the node_modules folder.
+```
 * Run 	`npm install`
 
 To launch the application
 * Run 	`ng serve --open`
 
-## Troubleshooting
+## Part VI: Troubleshooting
 ```Should the command to install and run the applicaiton fail try a few of these troubleshooting commands. 
 Do not run all of them at once, try one at a time. 
-Preferebly from an elevatied teminal(run as administrator).```
+Preferebly from an elevatied teminal(run as administrator).
+```
 If you are trying to run the application a second time and there are some missing depandancies use the following commands to download them
 * Run 	`npm update`
 * Run 	`npm update <packageName>`
@@ -61,8 +62,17 @@ If you want to rebuild everything in the application use the following command
 * Run 	`npm rebuild`
 If the install keeps refusing try to force it with the following
 * Run 	`npm install --force`
-When all the above fail t
+When all the above fail try to clean the cache and restart the installation
 * Run 	`npm cache clean --force` 
+When you get the error `Cannot GET /` on your screen, this means the jason-server is not running. 
+On a spearate terminal, navagate to the project root and:
+* Run 	`npm run server`
+
+## Other Issues 
+Pagination was added to the application. Because some changes had to be made on the default libraries for pagination, these were copied into the **app** folder.
+The following depandancy was removed from the **package.json** file under **dependancies**  
+`"jw-angular-pagination": "^1.1.0",`
+This is because the depandancy was manually added.
 
 Login Details And Generation of JWT tokens
 ========================================================
@@ -77,8 +87,6 @@ The login details used are from the database.json file
 
 `Login as an administrator to be able to edit users - create, update and delete.`
 `Login as an regular user to be able to view and create only - no update and delete.`
-
-
 
 
 Further Instructions for using Angular

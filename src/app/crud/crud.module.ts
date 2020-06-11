@@ -13,10 +13,18 @@ import { ViewComponent } from './view/view.component';
 import { DetailsComponent } from './details/details.component';
 import { CreateComponent } from './create/create.component';
 import { UpdateComponent } from './update/update.component';
+import { JwPaginationComponent } from '../pagination/jw-angular-pagination/lib/jw-pagination.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, DetailsComponent, CreateComponent, UpdateComponent, ViewComponent],
+  declarations: [
+    HomeComponent, 
+    DetailsComponent, 
+    CreateComponent, 
+    UpdateComponent, 
+    ViewComponent, 
+    JwPaginationComponent
+  ],
   imports: [
     CommonModule,
     CrudRoutingModule,
@@ -24,6 +32,13 @@ import { UpdateComponent } from './update/update.component';
     FormsModule,
     ReactiveFormsModule 
   ],
-  exports: [HomeComponent, DetailsComponent, CreateComponent, UpdateComponent,ViewComponent] 
+  exports: [
+    HomeComponent, 
+    DetailsComponent, 
+    CreateComponent, 
+    UpdateComponent,
+    ViewComponent, 
+    JwPaginationComponent
+  ] 
 })
 export class CrudModule { }

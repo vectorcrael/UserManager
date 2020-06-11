@@ -31,7 +31,7 @@ export function getAuthHttp(http) {
     AdminHomeComponent,
     AdminComponent,
     HomeWelcomeComponent,
-    RegisterComponent
+    RegisterComponent 
   ],
   imports: [
     BrowserModule,
